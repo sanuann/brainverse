@@ -1,3 +1,0 @@
-[submodule "bids-validator"]
-	path = bids-validator
-	url = https://github.com/INCF/bids-validator.git
