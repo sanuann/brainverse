@@ -65,7 +65,7 @@ displayPlanList().then(function(planList){
 }).then(function(planObjs){
   console.log("all plan obj: ", planObjs)
   if(planObjs.length !== 0){
-    $('#div-planList').append('<table class="table table-striped" id="tab1"></table>')
+    $('#div-planList').append('<table class="table table-striped hand" id="tab1"></table>')
     let planTable = document.getElementById("tab1")
     var header = planTable.createTHead()
     var rowH = header.insertRow(0)

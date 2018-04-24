@@ -9,8 +9,9 @@ newPlanObj = JSON.parse(localStorage.getItem("newPlanObj"))
 var sessionColumnTitle=''
 
 console.log("[plan-board.js] newPlanObj:--- ", newPlanObj)
+var backButton = ' <a href="/experiment-planner/html/plan-mgm.html"><span class="glyphicon glyphicon-backward" style="float:right;"></span></a>'
 
-$('#planInfo').append('<h4 id="pname">'+ newPlanObj['Name']+' <a data-toggle="modal" href="#updatePlanInfoModal"><span class="fa fa-pencil" style="float:right;"></span></a></h4><hr>')
+$('#planInfo').append('<h4 id="pname">'+ newPlanObj['Name']+ backButton + ' <a data-toggle="modal" href="#updatePlanInfoModal"><span class="fa fa-pencil" style="float:right;"></span></a></h4><hr>')
 $('#planInfo').append(createModal('updatePlanInfoModal', 'Update Plan Info', 'Update'))
 let expInfoForm = new AlpacaForm('#body-updatePlanInfoModal')
 createPlanInfoForm(expInfoForm,"updatePlanInfoModal", newPlanObj["Name"],newPlanObj["Description"])
