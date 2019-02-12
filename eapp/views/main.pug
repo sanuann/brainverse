@@ -1,23 +1,34 @@
 extends main-layout
 block content
-    .row
-        .col-md-4.col-sm-6.col-xs-12
-            +panel("NDA Editor","default")
-                a(href='/nda-editor/html/nda-editor.html') Curate NDA Form  »
+    .app-layout
+        .teams.box Teams
+        .channels.box Channels
+            .row
+                a(href='/nda-editor/html/nda-editor.html') Add modules »
+        .header.box Header
+        .modules.box
+            .row
+                .col-md-4.col-sm-6.col-xs-12
+                    +panel("NDA Editor","default")
+                        a(href='/nda-editor/html/nda-editor.html') Curate NDA Form  »
 
-        .col-md-4.col-sm-6.col-xs-12
-            +panel("Experiment Planner", "default")
-                a(href='/experiment-planner/html/plan-mgm.html') Create an Experiment plan  »
+                .col-md-4.col-sm-6.col-xs-12
+                    +panel("Experiment Planner", "default")
+                        a(href='/experiment-planner/html/plan-mgm.html') Create an Experiment plan  »
 
-        .col-md-4.col-sm-6.col-xs-12
-            +panel("Instrument Editor", "default")
-                a(href='/instrument-editor/html/ie-mgm.html') Create an Instrument  »
+                .col-md-4.col-sm-6.col-xs-12
+                    +panel("Instrument Editor", "default")
+                        a(href='/instrument-editor/html/ie-mgm.html') Create an Instrument  »
 
-    .row
-        .col-md-4.col-sm-6.col-xs-12
-            +panel("Data Acquisition","default")
-                a(href='/data-collection/html/dc-mgm.html') Start/View Data Acquisition
+            .row
+                .col-md-4.col-sm-6.col-xs-12
+                    +panel("Data Acquisition","default")
+                        a(href='/data-collection/html/dc-mgm.html') Start/View Data Acquisition
 
-        .col-md-4.col-sm-6.col-xs-12
-            +panel("NIDM","default")
-                a(href='/term-search/html/nidm-search.html') Term Search »
+                .col-md-4.col-sm-6.col-xs-12
+                    +panel("NIDM","default")
+                        a(href='/term-search/html/nidm-search.html') Term Search »
+
+        .input
+            input(type='text', placeholder='CSS Grid Layout Module')
+
